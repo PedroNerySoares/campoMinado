@@ -1,5 +1,6 @@
 package br.com.codeBr.cm.modelo;
 
+import static org.junit.Assert.assertSame;
 import static org.junit.jupiter.api.Assertions.*;
 
 import org.junit.jupiter.api.BeforeEach;
@@ -66,21 +67,49 @@ public class CampoTeste {
 
 
 	}
+	/*
+		 * @Test void testeAbrirVizinho2(){ Campo vizinho1 = new Campo(1,1); Campo
+		 * vizinho2 = new Campo(1,1); vizinho2.minar();
+		 * 
+		 * Campo vizinhoDoVizinho = new Campo(2,2);
+		 * vizinhoDoVizinho.adicionarVizinho(vizinho1);
+		 * vizinhoDoVizinho.adicionarVizinho(vizinho2);
+		 * 
+		 * campo.adicionarVizinho(vizinho1); campo.abrir();
+		 * 
+		 * assertTrue(vizinhoDoVizinho.isAberto() && vizinho1.isFechado() );
+		 * 
+		 * 
+		 * }
+		 */
+
 	@Test
-	void testeAbrirVizinho2(){
-		Campo vizinho1 = new Campo(1,1);
-		Campo vizinho2 = new Campo(1,1);
-		vizinho2.minar();
+	void testeAbrirCampoMarcado(){
+		campo.alternarMarcacao();
+		assertEquals("X",campo.toString());
 		
-		Campo vizinhoDoVizinho = new Campo(2,2);
-		vizinhoDoVizinho.adicionarVizinho(vizinho1);
-		vizinhoDoVizinho.adicionarVizinho(vizinho2);
-		
-		campo.adicionarVizinho(vizinho1);
-		campo.abrir();
-		
-		assertTrue(vizinhoDoVizinho.isAberto() && vizinho1.isAberto()  );
-
-
 	}
+	
+	
+	@Test
+	void testeAbrirCampoMinado() {
+		campo.abrir();
+		campo.minar();
+		assertEquals("*",campo.toString());
+		
+	}
+	@Test
+	void testeAbrirCampo() {
+		campo.abrir();
+		assertEquals(" ", campo.toString());
+	}
+	@Test
+	void testeCampoMinadoFechado() {
+		
+		assertEquals("?",campo.toString());
+		
+	}
+	
+	
+	
 }

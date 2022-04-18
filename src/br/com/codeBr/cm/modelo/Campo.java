@@ -24,7 +24,6 @@ public class Campo {
 		this.linha = linha;
 		this.coluna = coluna;
 	}
-	
 	 boolean adicionarVizinho(Campo vizinho) {
 		boolean linhaDiferente = linha !=vizinho.linha;
 		boolean colunaDiferente = coluna !=vizinho.coluna;
@@ -83,6 +82,49 @@ public class Campo {
 	 }
 	 public boolean isFechado() {
 		 return !isAberto();
+	 }
+	public boolean isMinado() {
+		return minado;
+	}
+	public void setMinado(boolean minado) {
+		this.minado = minado;
+	}
+	public int getLinha() {
+		return linha;
+	}
+	public int getColuna() {
+		return coluna;
+	}
+	 
+	 boolean objetivoAlcacado() {
+		 boolean desvendado = !minado && aberto;
+		 boolean protegido = !minado && marcado;
+		 return desvendado || protegido;
+		 
+	 }
+	 long minasNaVizinhanca() {
+		 return vizinhos.stream().filter(v->v.minado).count();
+	 }
+	 void reiniciar() {
+		 aberto=false;
+		 minado = false;
+		 marcado= false;
+	 }
+	 
+	 public String toString() {
+		 if(marcado) {
+			 return "X";
+		 }else if(aberto && minado) {
+			 return "*";
+			 
+		 }else if(aberto && minasNaVizinhanca()>0) {
+			 return Long.toString(minasNaVizinhanca());
+		 }else if(aberto) {
+			 return" ";
+		 }else {
+			 return"?";
+		 }
+		 
 	 }
 }
 
