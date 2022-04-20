@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <projectDescription>
-	<name>campoMinado</name>
+	<name>projetoCampoMinado</name>
 	<comment></comment>
 	<projects>
 	</projects>
@@ -16,7 +16,7 @@
 	</natures>
 	<filteredResources>
 		<filter>
-			<id>1650199890187</id>
+			<id>1650417036414</id>
 			<name></name>
 			<type>30</type>
 			<matcher>

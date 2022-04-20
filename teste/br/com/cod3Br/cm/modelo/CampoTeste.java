@@ -1,4 +1,4 @@
-package br.com.codeBr.cm.modelo;
+package br.com.cod3Br.cm.modelo;
 
 import static org.junit.Assert.assertSame;
 import static org.junit.jupiter.api.Assertions.*;
@@ -7,8 +7,7 @@ import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.TestTemplate;
 
-import br.com.codeBr.cm.excecao.ExplosaoException;
-
+import br.com.cod3Br.cm.execao.ExplosaoException;
 public class CampoTeste {
 	
 	private Campo campo; 

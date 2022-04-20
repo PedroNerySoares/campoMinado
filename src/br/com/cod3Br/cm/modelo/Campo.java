@@ -1,4 +1,4 @@
-package br.com.codeBr.cm.modelo;
+package br.com.cod3Br.cm.modelo;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -6,7 +6,7 @@ import java.util.function.Predicate;
 
 import org.junit.jupiter.api.Test;
 
-import br.com.codeBr.cm.excecao.ExplosaoException;
+import br.com.cod3Br.cm.execao.ExplosaoException;
 
 public class Campo {
 	private final int linha; 
