@@ -71,6 +71,7 @@ public class Tabuleiro {
 	public void reiniciar() {
 		campos.stream().forEach(c-> c.reiniciar());
 		sortearMinas();
+		System.out.println(toString()); 
 	}
 	public String toString() {
 		
