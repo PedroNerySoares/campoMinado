@@ -48,11 +48,11 @@ public class TabuleiroConsole {
 				String digitado = caputrarValorDigitado("Digite (x,y): ");
 				Iterator<Integer> xy= Arrays.stream(digitado.split(","))
 					.map(e->Integer.parseInt(e.trim())).iterator();
-				System.out.println(xy.next());
-				System.out.println(xy.next());
+//				System.out.println(xy.next());
+//				System.out.println(xy.next());
 				
-				digitado = caputrarValorDigitado("1-abrir");	
-				digitado = caputrarValorDigitado("2-Marcar/Desmarcar");	
+				digitado = caputrarValorDigitado("1-abrir 2-Marcar/Desmarcar");	
+				
 				
 				
 				if("1".equalsIgnoreCase(digitado)) {
@@ -63,6 +63,7 @@ public class TabuleiroConsole {
 			}
 			System.out.println("Voce Ganhou!");
 		} catch (ExplosaoException e) {
+			System.out.println(tabuleiro);
 			System.out.println("Voce Perdeu!");
 		}
 	}
