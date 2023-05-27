@@ -20,6 +20,7 @@ public class TabuleiroConsole {
 
 	private void executarJogo() {
 		try {
+			
 			boolean continuar=true;
 			while(continuar) {
 				
